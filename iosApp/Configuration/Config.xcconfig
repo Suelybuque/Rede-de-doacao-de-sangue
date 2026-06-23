@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=Rede_de_doacao_de_sangue
+PRODUCT_BUNDLE_IDENTIFIER=org.example.project.Rede_de_doacao_de_sangue$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
