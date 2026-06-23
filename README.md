@@ -1,16 +1,112 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop (JVM).
+# 🩸 Rede de Doação de Sangue
 
-* [/iosApp](./iosApp/iosApp) contains an iOS application. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+Aplicação móvel Android desenvolvida no âmbito da disciplina de **Computação Móvel**, com o objectivo de facilitar a ligação entre dadores de sangue e pessoas ou instituições que necessitam de transfusões em situações normais ou de emergência.
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## 📖 Descrição
+
+A disponibilidade de sangue é fundamental para cirurgias, tratamentos médicos e atendimento a emergências. Contudo, a procura por dadores compatíveis continua a ser um processo moroso e pouco eficiente.
+
+A **Rede de Doação de Sangue** pretende criar uma plataforma centralizada que permita a criação de uma comunidade de dadores, facilitando a divulgação de pedidos de sangue e a localização de potenciais dadores compatíveis.
+
+## 🎯 Objectivos
+
+### Objectivo Geral
+
+Desenvolver uma aplicação móvel Android que permita criar uma rede de dadores, facilitando a divulgação de pedidos de sangue e a localização de potenciais doadores.
+
+### Objectivos Específicos
+
+* Permitir o registo de utilizadores e dos respectivos grupos sanguíneos;
+* Publicar pedidos de doação de sangue;
+* Pesquisar dadores por grupo sanguíneo;
+* Disponibilizar informações de contacto entre utilizadores;
+* Enviar notificações em situações de emergência;
+* Promover a cultura de doação voluntária.
+
+## ✨ Funcionalidades Principais
+
+* 🔐 Registo e autenticação de utilizadores;
+* 👤 Criação e gestão do perfil do dador;
+* 🩸 Pesquisa de dadores por grupo sanguíneo;
+* 🚨 Publicação de pedidos urgentes de sangue;
+* 🔔 Sistema de notificações;
+* 📋 Histórico de doações realizadas.
+
+## 🏗 Arquitectura
+
+O projecto segue a arquitectura **MVVM (Model-View-ViewModel)**, promovendo uma melhor separação de responsabilidades, maior manutenibilidade e escalabilidade da aplicação.
+
+```
+UI (Jetpack Compose)
+        ↓
+ViewModel
+        ↓
+Repository
+        ↓
+Firebase Services
+(Authentication + Firestore)
+```
+
+## 🛠 Tecnologias Utilizadas
+
+* **Kotlin**
+* **Jetpack Compose**
+* **Material Design 3**
+* **MVVM**
+* **StateFlow**
+* **Firebase Authentication**
+* **Cloud Firestore**
+* **Android Studio**
+
+## 📂 Estrutura do Projecto
+
+```
+app/
+├── data/
+│   ├── model/
+│   ├── repository/
+│   └── remote/
+├── ui/
+│   ├── screens/
+│   ├── components/
+│   └── theme/
+├── viewmodel/
+├── navigation/
+└── utils/
+```
+
+## 🚀 Impacto Esperado
+
+Espera-se que esta aplicação contribua para:
+
+* Reduzir o tempo necessário para encontrar dadores compatíveis;
+* Melhorar a resposta em situações de emergência;
+* Incentivar a prática da doação voluntária;
+* Aproximar dadores, receptores e instituições de saúde;
+* Contribuir positivamente para a saúde pública.
+
+## 👥 Equipa de Desenvolvimento
+
+Projecto desenvolvido por um grupo de **6 estudantes de Engenharia Informática**, no âmbito da disciplina de **Computação Móvel**.
+
+| Membro | Função          |
+| ------ | --------------- |
+| Anwar Machado | Desenvolvimento |
+| Melvin Chemane | Desenvolvimento |
+| Shenil Gafuro | Desenvolvimento |
+| Suely Buque | Desenvolvimento |
+| Vlad Van | Desenvolvimento |
+| Yunisse Langa | Desenvolvimento |
+
+## 📚 Disciplina
+
+**Computação Móvel**
+Licenciatura em Engenharia Informática
+
+---
+
+> "Uma doação pode salvar várias vidas."
+
 
 ### Running the apps
 
